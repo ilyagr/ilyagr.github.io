@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Error 404 :(</title>
+
+    <script>
+        window.onload = function () {
+            const destination = window.location.href;
+            if (window.location.href.includes("ilyagr.github.io/test-website")) {
+                const redirectLocation = window.location.href.replace(
+                    "ilyagr.github.io/test-website",
+                    "jj-preview.github.io/test-website"
+                );
+                document.getElementById("body").innerHTML = "test-website has moved to an org! !<br/><br/>Redirecting to " + redirectLocation + " ...";
+                window.location.href = redirectLocation;
+            } else {
+              document.getElementById("body").innerHTML = "404: Page not found";
+            }
+        }
+    </script>
+</head>
+
+<body id="body" style="text-align: center">
+    Page not found
+    <br>
+    If you are looking for <code>test-website</code>, it moved to <a href="https://jj-preview.github.io/test-website">https://jj-preview.github.io/test-website</a>
+    <br>
+    If you enable Javascript and reload, you may be redirected automatically.
+</body>
+
+</html>
